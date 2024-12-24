@@ -1,0 +1,20 @@
+
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: notify-vs-external
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - notify-gateway-external
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: core-app
+        port:
+          number: 80
