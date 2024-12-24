@@ -1,4 +1,5 @@
 ### we can directly enable the istio in aks cluster and it promote the option is it exteral or internal
+![image](https://github.com/user-attachments/assets/e5a1e27c-d4f5-41b3-91e1-91c6ac2d9ed2)
 
 az aks show --resource-group ${RESOURCE_GROUP} --name ${CLUSTER}  --query 'serviceMeshProfile.istio.revisions'
 
